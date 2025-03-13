@@ -3,7 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adega Santari</title>
+    
+    <!-- Tags SEO Básicas -->
+    <title>Adega Santari - A Melhor Adega de Bragança Paulista e região</title>
+    <meta name="description" content="Adega Santari, a melhor adega de Bragança Paulista e região. Oferecemos uma seleção premium de vinhos e bebidas. Visite-nos na Alameda Horizonte, 100.">
+    <meta name="keywords" content="Adega Santari, adega, vinhos, bebidas, Bragança Paulista, loja de vinhos, bebidas finas, adega premium">
+    <meta name="author" content="Adega Santari">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://webereaugusto.github.io/adegasantari/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webereaugusto.github.io/adegasantari/">
+    <meta property="og:title" content="Adega Santari - A Melhor Adega de Bragança Paulista">
+    <meta property="og:description" content="Adega Santari, a melhor adega de Bragança Paulista e região. Oferecemos uma seleção premium de vinhos e bebidas.">
+    <meta property="og:image" content="https://angelinaloteamentos.com.br/logo.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://webereaugusto.github.io/adegasantari/">
+    <meta property="twitter:title" content="Adega Santari - A Melhor Adega de Bragança Paulista">
+    <meta property="twitter:description" content="Adega Santari, a melhor adega de Bragança Paulista e região. Oferecemos uma seleção premium de vinhos e bebidas.">
+    <meta property="twitter:image" content="https://angelinaloteamentos.com.br/logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://angelinaloteamentos.com.br/logo.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="https://angelinaloteamentos.com.br/logo.jpg">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="Bragança Paulista">
+    <meta name="geo.position" content="-22.9519;-46.5418">
+    
     <style>
         * {
             margin: 0;
@@ -278,6 +311,50 @@
             const year = new Date().getFullYear();
             document.querySelector('footer p').innerHTML = `&copy; ${year} Adega Santari. Todos os direitos reservados.`;
         });
+    </script>
+    
+    <!-- Structured Data / Schema.org para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LiquorStore",
+      "name": "Adega Santari",
+      "image": "https://angelinaloteamentos.com.br/logo.jpg",
+      "description": "A Melhor Adega de Bragança Paulista e região. Oferecemos uma seleção premium de vinhos e bebidas.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Alameda Horizonte, 100",
+        "addressLocality": "Bragança Paulista",
+        "addressRegion": "SP",
+        "postalCode": "12916-411",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.9519,
+        "longitude": -46.5418
+      },
+      "url": "https://webereaugusto.github.io/adegasantari/",
+      "telephone": "+55 11 98942-6878",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com/adegasantari"
+      ]
+    }
     </script>
 </body>
 </html> 
