@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adega Santari</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', 'Lora', serif;
+        }
+        
+        body {
+            background: linear-gradient(to bottom, #bd393d, #7a2427);
+            color: #333;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .logo {
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #bd393d;
+            margin-bottom: 10px;
+            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 1.3rem;
+            font-family: 'Lora', serif;
+        }
+        
+        .info-section {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .info-title {
+            color: #bd393d;
+            border-bottom: 2px solid #bd393d;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+            display: inline-block;
+        }
+        
+        .info-content {
+            font-size: 1.1rem;
+            font-family: 'Lora', serif;
+        }
+        
+        .address {
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        
+        .contact-card {
+            flex: 0 1 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #bd393d;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            color: #bd393d;
+            font-size: 1.8rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: #9a2e31;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #777;
+            font-size: 0.9rem;
+            font-family: 'Lora', serif;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Botão fixo de WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 36px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+        
+        .whatsapp-button i {
+            margin-top: 2px;
+        }
+        
+        /* Decoração lateral */
+        .side-decoration {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: -1;
+        }
+        
+        .side-decoration-left {
+            left: -50px;
+            background: linear-gradient(to right, transparent, rgba(189, 57, 61, 0.1));
+        }
+        
+        .side-decoration-right {
+            right: -50px;
+            background: linear-gradient(to left, transparent, rgba(189, 57, 61, 0.1));
+        }
+        
+        @media (max-width: 1100px) {
+            .container {
+                margin: 0 20px;
+            }
+            
+            .side-decoration {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .whatsapp-button {
+                width: 50px;
+                height: 50px;
+                font-size: 28px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="side-decoration side-decoration-left"></div>
+        <div class="side-decoration side-decoration-right"></div>
+        
+        <header>
+            <img src="https://angelinaloteamentos.com.br/logo.jpg" alt="Logo Adega Santari" class="logo">
+            <h1>Adega Santari</h1>
+            <p class="tagline">A Melhor Adega de Bragança Paulista em região</p>
+        </header>
+        
+        <section class="info-section">
+            <h2 class="info-title">Nosso Endereço</h2>
+            <div class="info-content">
+                <div class="address">
+                    <p>Alameda Horizonte, 100</p>
+                    <p>Bragança Paulista - SP</p>
+                    <p>CEP: 12916-411</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="info-section">
+            <h2 class="info-title">Entre em Contato</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/5511989426878" style="text-decoration: none; color: #bd393d;">+55 11 98942-6878</a></p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/adegasantari" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2023 Adega Santari. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+    <!-- Botão fixo de WhatsApp -->
+    <a href="https://wa.me/5511989426878" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Atualiza o ano do copyright automaticamente
+        document.addEventListener('DOMContentLoaded', function() {
+            const year = new Date().getFullYear();
+            document.querySelector('footer p').innerHTML = `&copy; ${year} Adega Santari. Todos os direitos reservados.`;
+        });
+    </script>
+</body>
+</html> 
