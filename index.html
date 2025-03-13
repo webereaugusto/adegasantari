@@ -88,14 +88,15 @@
         
         .contact-info {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 20px;
             margin-top: 30px;
-            justify-content: center;
+            align-items: center;
         }
         
         .contact-card {
-            flex: 0 1 300px;
+            width: 100%;
+            max-width: 350px;
             background-color: white;
             padding: 20px;
             border-radius: 8px;
@@ -200,11 +201,6 @@
         }
         
         @media (max-width: 768px) {
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-            
             h1 {
                 font-size: 2rem;
             }
