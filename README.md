@@ -22,7 +22,7 @@ Este é um site simples e elegante para a Adega Santari, desenvolvido com HTML, 
 ## Visualização
 
 O site está hospedado no GitHub Pages e pode ser acessado em:
-[https://webereaugusto.github.io/adegasantari/](https://webereaugusto.github.io/adegasantari/)
+[https://webereaugusto.github.io/adegasantori/](https://webereaugusto.github.io/adegasantori/)
 
 ## Contato
 
